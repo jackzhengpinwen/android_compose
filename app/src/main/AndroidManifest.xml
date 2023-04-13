@@ -23,6 +23,13 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AndroidCompose">
+
+        </activity>
+        <activity
+            android:name=".codelab_refactor.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sunflower">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
