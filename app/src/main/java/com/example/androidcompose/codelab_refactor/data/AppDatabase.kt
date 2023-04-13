@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import com.example.androidcompose.codelab_refactor.utilities.DATABASE_NAME
 import com.example.androidcompose.codelab_refactor.workers.SeedDatabaseWorker
 
@@ -31,6 +32,7 @@ abstract class AppDatabase: RoomDatabase() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
                         val request = OneTimeWorkRequestBuilder<SeedDatabaseWorker>().build()
+                        WorkManager.getInstance(context).enqueue(request)
                     }
                 }).build()
         }
