@@ -36,6 +36,13 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Sunflower">
+
+        </activity>
+        <activity
+            android:name=".codelab_basiclayouts.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sunflower">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

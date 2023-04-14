@@ -74,6 +74,7 @@ dependencies {
     implementation "androidx.compose.material:material:$compose_ui_version"
     implementation "androidx.compose.runtime:runtime-livedata"
     implementation "com.google.accompanist:accompanist-themeadapter-material:0.28.0"
+    implementation "androidx.compose.material:material-icons-extended"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
