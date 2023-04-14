@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material.MaterialTheme
+import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
@@ -17,6 +19,7 @@ import com.example.androidcompose.codelab_refactor.data.Plant
 import com.example.androidcompose.codelab_refactor.utilities.InjectorUtils
 import com.example.androidcompose.codelab_refactor.viewmodels.PlantDetailViewModel
 import com.example.androidcompose.databinding.FragmentPlantDetailBinding
+import com.google.accompanist.themeadapter.material.MdcTheme
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
@@ -73,6 +76,15 @@ class PlantDetailFragment : Fragment() {
                         true
                     }
                     else -> false
+                }
+            }
+
+            composeView.apply {
+                setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+                setContent {
+                    MdcTheme {
+                        PlantDetailDescription(plantDetailViewModel)
+                    }
                 }
             }
         }
