@@ -141,7 +141,7 @@ fun HomeSection(
     Column(modifier) {
         Text(
             text = stringResource(id = title).uppercase(Locale.getDefault()),
-            style = MaterialTheme.typography.h2,
+            style = MaterialTheme.typography.h5,
             modifier = Modifier
                 .paddingFromBaseline(top = 40.dp, bottom = 8.dp)
                 .padding(horizontal = 16.dp)
@@ -170,7 +170,7 @@ fun AlignYourBodyElement(
         )
         Text(
             text = stringResource(id = text),
-            style = MaterialTheme.typography.h3,
+            style = MaterialTheme.typography.h6,
             modifier = Modifier.paddingFromBaseline(8.dp)
         )
     }
@@ -234,7 +234,7 @@ fun FavoriteCollectionCard(
             )
             Text(
                 text = stringResource(text),
-                style = MaterialTheme.typography.h3,
+                style = MaterialTheme.typography.h6,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
